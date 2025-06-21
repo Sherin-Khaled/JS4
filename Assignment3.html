@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Assignment3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav id="navigationBar" class="navbar navbar-expand-lg shadow d-none" style="background-color: #24353f;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white ps-3" href="#">Smart Login System</a>
+    <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon text-white"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button id="Logout" class="btn btn-outline-light">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div id="firstPage" class="container layer d-flex justify-content-center align-items-center flex-column p-4 shadow mt-5">
+        <h2 style="color: #17a2b8;" class="mb-3 display-3">Smart Login System</h2>
+
+
+        <div id="loginIn" class="inner d-flex flex-column col-12 w-75 text-center">
+        <input oninput="validate('email' , this)" type="email" id="loginEmail" class="form-control w-100 mx-auto mb-3 border-info bg-transparent text-white" placeholder="Enter Your Email">
+        <input oninput="validate('password' , this)" type="password" id="loginPassword" class="form-control w-100 mx-auto mb-3 border-info bg-transparent text-white" placeholder="Enter Your Password">
+        <h5 id="incorrect"></h5>
+        <button id="loginInBtn" class="btn w-100 btn-outline-info w-100 mb-3">Login</button>
+        <h6 class="mb-3 text-white">Don’t have an account? <span class="signup-hover" id="showSignUp"> Sign Up</span></h6>
+        </div>
+
+        <div id="signUp" class="d-none flex-column inner col-12 w-75 text-center">
+        <input type="text" id="signName" class="form-control w-100 mx-auto mb-3 border-info bg-transparent text-white" placeholder="Enter Your Name">
+        <input oninput="validate('email' , this)" type="email" id="signEmail" class="form-control w-100 mx-auto mb-3 border-info bg-transparent text-white" placeholder="Enter Your Email">
+        <input oninput="validate('password' , this)" type="password" id="signPassword" class="form-control w-100 mx-auto mb-3 border-info bg-transparent text-white" placeholder="Enter Your Password">
+        <h5 id="incorrect"></h5>
+        <button id="signUpBtn" class="btn w-100 btn-outline-info w-100 mb-3">Sign Up</button>
+        <h6 class="mb-3 text-white">Don’t have an account?<span class="signup-hover" id="showLoginIn" > Login in</span></h6>
+        </div>
+    </div>
+
+    <div id="welcomePage" class="p-5 container d-flex shadow d-none justify-content-center align-items-center align-content-center text-center">
+    <h1 id="welcomeSentence" style="color: #17a2b8;"></h1>
+    </div>
+
+    <script src="Js/Assignment3.js"></script>
+</body>
+</html>
